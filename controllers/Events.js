@@ -21,10 +21,13 @@ module.exports = {
         });   
     },
     getExternByEvent: function(req, res){
-        var queryTxt = 'SELECT * FROM public.externs WHERE event_id = $1'; 
+        var queryTxt = 'SELECT externs.CIP1, u1.FIRSTNAME as f1, u1.LASTNAME as l1, \
+        externs.CIP2, u2.FIRSTNAME as f2, u2.LASTNAME as l2, \
+        externs.EXTERN_NAME FROM public.externs, public.users as u1, public.users \
+        as u2 WHERE event_id = $1 AND externs.CIP1 = u1.CIP AND externs.CIP2 = u2.CIP'; 
         const id = req.params.id;  
         db.query(queryTxt, [id], (err, out) => {
-            if(err) res.status(400).send(err);
+            if(err) res.status(400).send(err);  
             else res.send(out.rows);
         });  
     },
