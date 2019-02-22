@@ -1,5 +1,7 @@
-const db = require('../config/DB');
-const { Pool } = require('pg');
+const db = require('../dbconfig/DB');
+const {
+    Pool
+} = require('pg');
 
 const pool = new Pool({
     user: db.user,

@@ -1,0 +1,32 @@
+{
+  "name": "5a8externmanager",
+  "version": "1.0.0",
+  "description": "Back pour la gestion des externes. Voici les paths:",
+  "main": "App.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "dateformat": "^3.0.3",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "pg": "^7.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "start": "node App.js",
+    "debug": "nodemon App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorFan95/5a8ExternManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VictorFan95/5a8ExternManager/issues"
+  },
+  "homepage": "https://github.com/VictorFan95/5a8ExternManager#readme"
+}
